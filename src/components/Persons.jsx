@@ -32,19 +32,23 @@ export const Persons = () => {
 
   return (
     <div>
-      <h2>IT Team</h2>
-      {persons.map((person) => {
-        return (
-          <div>
-            <Person 
-              key={person.id}
-              name={person.name}
-              role={person.role}
-              img={person.img}
-            />
-          </div>
-        )
-      })}
+        <h2>IT Team</h2>
+      <div className='container d-flex justify-content-center'>
+        <div className='d-flex flex-row'>
+          {persons.map((person) => {
+            return (
+              <div>
+                <Person 
+                  key={person.id}
+                  name={person.name}
+                  role={person.role}
+                  img={person.img}
+                />
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }
