@@ -2,17 +2,13 @@ import React from 'react'
 
 export const Person = (props) => {
   return (
-    <div>
-      <div className='row'>
-        <div>
-          <img src={props.img} alt={props.name} />
-        </div>
-        <div>
-          <h3>{props.name}</h3>
-        </div>
-        <div>
-          <h4>{props.role}</h4>
-        </div>
+    <div className="col">
+      <div className="card" style={{width: "18rem"}}>
+        <img src={props.img} className="card-img-top" alt={props.name} />
+          <div className="card-body">
+            <h5 className="card-title">{props.name}</h5>
+            <p className="card-text">{props.role}</p>
+          </div>
       </div>
     </div>
   )
